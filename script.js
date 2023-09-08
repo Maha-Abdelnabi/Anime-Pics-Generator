@@ -8,6 +8,8 @@ async function getAnime(){
     try {
         const response = await fetch("https://catboys.com/api/img");
         const data =await  response.json();
+        animeImgEl.src = data.url;
+        amineNameEl.innerHTML = data.artist;
         console.log(data)
     } catch (error) {
         
